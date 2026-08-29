@@ -11,24 +11,12 @@
 ---
 
 <p align="center">
-  <a href="https://github.com/Chamroosh98/YT-Crawler/releases">
-    <img src="https://img.shields.io/badge/v1.0.0-181717?style=for-the-badge&logo=github&logoColor=white" alt="Version 1.0.0">
-  </a>
-  <a href="https://www.youtube.com/">
-    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
-  </a>
-  <a href="https://go.dev/">
-    <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go">
-  </a>
-  <a href="https://github.com/features/actions">
-    <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions">
-  </a>
-  <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/badge/MIT-000000?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License">
-  </a>
-  <a href="https://t.me/Chamroosh98">
-    <img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
-  </a>
+  <a href="https://github.com/Chamroosh98/YT-Crawler/releases"><img src="https://img.shields.io/badge/v1.0.0-181717?style=for-the-badge&logo=github&logoColor=white" alt="Version 1.0.0"></a>
+  <a href="https://www.youtube.com/"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"></a>
+  <a href="https://go.dev/"><img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go"></a>
+  <a href="https://github.com/features/actions"><img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/MIT-000000?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License"></a>
+  <a href="https://t.me/Chamroosh98"><img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram"></a>
 </p>
 
 <p align="center">
