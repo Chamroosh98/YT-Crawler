@@ -138,7 +138,7 @@ If you want the crawler to run automatically without keeping your own machine on
 
 2. Then from your GitHub repository, go to :
 
-**Settings → Secrets and variables → Actions → Secrets**
+    **Settings → Secrets and variables → Actions → Secrets**
 
 3. Finally Create these three repository secrets :
 
