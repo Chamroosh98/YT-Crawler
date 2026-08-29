@@ -8,11 +8,11 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/config"
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/crawler"
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/notifier"
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/storage"
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/yt"
+	"github.com/Chamroosh98/YT-Crawler/internal/config"
+	"github.com/Chamroosh98/YT-Crawler/internal/crawler"
+	"github.com/Chamroosh98/YT-Crawler/internal/notifier"
+	"github.com/Chamroosh98/YT-Crawler/internal/storage"
+	"github.com/Chamroosh98/YT-Crawler/internal/yt"
 )
 
 func main() {

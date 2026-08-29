@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/config"
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/models"
+	"github.com/Chamroosh98/YT-Crawler/internal/config"
+	"github.com/Chamroosh98/YT-Crawler/internal/models"
 	"google.golang.org/api/option"
 	"google.golang.org/api/youtube/v3"
 )

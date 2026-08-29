@@ -6,11 +6,11 @@ import (
 	"log"
 	"time"
 
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/config"
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/models"
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/notifier"
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/storage"
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/yt"
+	"github.com/Chamroosh98/YT-Crawler/internal/config"
+	"github.com/Chamroosh98/YT-Crawler/internal/models"
+	"github.com/Chamroosh98/YT-Crawler/internal/notifier"
+	"github.com/Chamroosh98/YT-Crawler/internal/storage"
+	"github.com/Chamroosh98/YT-Crawler/internal/yt"
 )
 
 type Service struct {

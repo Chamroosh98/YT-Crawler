@@ -1,4 +1,4 @@
-module github.com/Chamroosh98/YT-CF-Crawler
+module github.com/Chamroosh98/YT-Crawler
 
 go 1.27.0
 

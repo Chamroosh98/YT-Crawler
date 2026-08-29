@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/models"
+	"github.com/Chamroosh98/YT-Crawler/internal/models"
 	_ "modernc.org/sqlite"
 )
 

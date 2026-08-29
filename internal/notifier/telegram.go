@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Chamroosh98/YT-CF-Crawler/internal/models"
+	"github.com/Chamroosh98/YT-Crawler/internal/models"
 )
 
 type Telegram struct {
