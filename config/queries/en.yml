@@ -1,0 +1,10 @@
+
+queries:
+  - query: "cloudflare workers"
+  - query: "cloudflare workers tutorial"
+  - query: "cloudflare d1"
+  - query: "cloudflare kv"
+  - query: "cloudflare r2"
+  - query: "cloudflare pages"
+  - query: "cloudflare tunnels"
+  - query: "cloudflare durable objects"

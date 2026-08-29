@@ -1,0 +1,7 @@
+search:
+  days_lookback: 14
+  max_results_per_query: 15
+  enabled_languages:
+    - en
+    - fa
+    # - zh
