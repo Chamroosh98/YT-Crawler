@@ -30,37 +30,35 @@ func New(cfg *config.Config, store *storage.Storage, ytClient *yt.Client, telegr
 }
 
 func (s *Service) Run(ctx context.Context) error {
-	log.Println("🚀 Starting crawler...")
+	log.Println("  🚀 Starting crawler...")
 
-	// Load enabled queries from database (not directly from YAML)
 	dbQueries, err := s.store.GetEnabledQueries()
 	if err != nil {
 		return err
 	}
 
 	if len(dbQueries) == 0 {
-		log.Println("⚠️  No enabled queries found in database")
+		log.Println("  ⚠️  No enabled queries found in database")
 		return nil
 	}
 
-	log.Printf("📋 Loaded %d enabled queries from database", len(dbQueries))
+	log.Printf("  📋 Loaded %d enabled queries from database", len(dbQueries))
 
 	var totalFound int
-	var totalNew int
+	var newVideos []models.Video
 
 	for i, dbq := range dbQueries {
-		// Convert DB query to config.Query for the YouTube client
 		q := config.Query{
 			Query:      dbq.Query,
 			Language:   dbq.Language,
 			MaxResults: dbq.MaxResults,
 		}
 
-		log.Printf("(%d/%d) Searching: [%s] %s", i+1, len(dbQueries), q.Language, q.Query)
+		log.Printf("(%d/%d) Searching : [%s] %s", i+1, len(dbQueries), q.Language, q.Query)
 
 		videos, err := s.ytClient.Search(ctx, q, s.cfg.Search.DaysLookback)
 		if err != nil {
-			log.Printf("❌ Search failed: %v", err)
+			log.Printf("  ❌ Search failed : %v", err)
 			continue
 		}
 
@@ -70,30 +68,35 @@ func (s *Service) Run(ctx context.Context) error {
 		for _, video := range videos {
 			isNew, err := s.store.SaveVideo(video)
 			if err != nil {
-				log.Printf("⚠️  Failed to save video %s: %v", video.ID, err)
+				log.Printf("  ⚠️  Failed to save video %s : %v", video.ID, err)
 				continue
 			}
 
 			if isNew {
 				newCount++
-				totalNew++
-
-				if err := s.telegram.SendVideo(video); err != nil {
-					log.Printf("⚠️  Failed to send telegram notification: %v", err)
-				}
-
-				time.Sleep(400 * time.Millisecond)
+				newVideos = append(newVideos, video)
 			}
 		}
 
-		log.Printf("   → Found: %d | New: %d", len(videos), newCount)
+		log.Printf("   → Found : %d | New: %d", len(videos), newCount)
 		time.Sleep(300 * time.Millisecond)
 	}
 
+	// Send one summary instead of individual messages
+	if len(newVideos) > 0 {
+		if err := s.telegram.SendSummary(newVideos); err != nil {
+			log.Printf("  ⚠️  Failed to send summary: %v", err)
+		} else {
+			log.Printf("  📨 Summary sent (%d new videos)", len(newVideos))
+		}
+	} else {
+		log.Println("  ℹ️  No new videos to notify")
+	}
+
 	log.Println("  =====================================")
-	log.Printf("   ✅ Crawler finished")
-	log.Printf("     Total videos found : %d", totalFound)
-	log.Printf("     New videos saved   : %d", totalNew)
+	log.Printf("  ✅ Crawler finished")
+	log.Printf("    Total videos found : %d", totalFound)
+	log.Printf("    New videos saved   : %d", len(newVideos))
 	log.Println("  =====================================")
 
 	return nil
