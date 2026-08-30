@@ -31,6 +31,7 @@ func (t *Telegram) Enabled() bool {
 	return t.botToken != "" && t.chatID != ""
 }
 
+// SendVideo sends a video notification to Telegram
 func (t *Telegram) SendVideo(v models.Video) error {
 	if !t.Enabled() {
 		return nil
@@ -65,11 +66,11 @@ func formatVideoMessage(v models.Video) string {
 	sb.WriteString("🎬 <b>" + escapeHTML(v.Title) + "</b>\n\n")
 	sb.WriteString("👤 Channel: " + escapeHTML(v.Channel) + "\n")
 	sb.WriteString("🗓 Published: " + v.PublishedAt.Format("2006-01-02") + "\n")
-	
+
 	if v.Language != "" {
 		sb.WriteString("🌐 Language: " + strings.ToUpper(v.Language) + "\n")
 	}
-	
+
 	sb.WriteString("\n🔗 " + v.URL)
 
 	return sb.String()

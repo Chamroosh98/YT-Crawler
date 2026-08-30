@@ -3,6 +3,7 @@ package models
 
 import "time"
 
+// Video represents a YouTube video
 type Video struct {
 	ID          string    `json:"id"`
 	Title       string    `json:"title"`

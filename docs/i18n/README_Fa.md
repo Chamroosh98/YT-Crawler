@@ -9,7 +9,7 @@
 ---
 
 <p align="center">
-  <a href="https://github.com/Chamroosh98/YT-Crawler/releases"><img src="https://img.shields.io/badge/v1.0.0-181717?style=for-the-badge&logo=github&logoColor=white" alt="Version 1.0.0"></a>
+  <a href="https://github.com/Chamroosh98/YT-Crawler/releases"><img src="https://img.shields.io/badge/v1.1.0-181717?style=for-the-badge&logo=github&logoColor=white" alt="Version 1.0.0"></a>
   <a href="https://www.youtube.com/"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"></a>
   <a href="https://go.dev/"><img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go"></a>
   <a href="https://github.com/features/actions"><img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions"></a>
@@ -23,8 +23,7 @@
 
 ### 📖 درباره پروژه
 
-ابزار **YouTube Crawler** یه خزنده‌ی سبک و ماژولار برای یوتیوبه که با **Go** نوشته شده.
-
+ابزار **YouTube Crawler** یه خزنده‌ی سبک و ماژولار برای یوتیوبه که با **Go** نوشته شده1
 این ابزار با بهره از کلیدواژه های دلخواه، ویدیوهای موردنظرت رو پیدا می‌کنه، ویدیوهای جدید رو داخل پایگاه‌داده‌ی **SQLite** ذخیره می‌کنه و هر زمان دیتای جدیدی پیدا بشه، به وسیله **Telegram** بهت خبر می‌ده!
 
 ---

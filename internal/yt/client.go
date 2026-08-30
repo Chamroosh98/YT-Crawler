@@ -1,3 +1,4 @@
+
 package yt
 
 import (
@@ -26,6 +27,7 @@ func New(apiKey string) (*Client, error) {
 	return &Client{service: service}, nil
 }
 
+// Search searches YouTube and returns a list of videos
 func (c *Client) Search(ctx context.Context, q config.Query, daysLookback int) ([]models.Video, error) {
 	publishedAfter := time.Now().UTC().AddDate(0, 0, -daysLookback).Format(time.RFC3339)
 
