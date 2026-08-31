@@ -1,0 +1,12 @@
+.git
+.github
+data
+mcp
+docs
+*.md
+.env
+.env.*
+**/node_modules
+**/.DS_Store
+bin
+tmp

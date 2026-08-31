@@ -1,0 +1,10 @@
+
+services:
+  bot:
+    build: .
+    container_name: yt-crawler-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - TZ=UTC
